@@ -64,7 +64,7 @@ def extraction():
 				employee = {
 					"Name": employee_name,
 					"Role": role,
-					"Employment Span": 0,
+					"Employment Tenure": 0,
 					"Profile Tag": profile_tag,
 					"CompanyID": 9707,
 					"CompanyName": "Endava",

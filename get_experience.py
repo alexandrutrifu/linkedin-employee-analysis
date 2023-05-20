@@ -27,17 +27,17 @@ def get_experience(company: str, driver: WebDriver, employee_data: dict):
 				By.XPATH, '//span[contains(text(), "Present") and @aria-hidden="true"]').text
 			current_job_info = current_job_info.split(" · ")[1]
 
-			# Calculate employment span
-			span = 0
+			# Calculate employment tenure
+			tenure = 0
 			if current_job_info.find("mos") != -1:
 				# Number of months specified
 				index = current_job_info.find("mos")
-				span += int(current_job_info[index-2])
+				tenure += int(current_job_info[index-2])
 
 			if current_job_info.find("yrs") != -1:
 				# Number of years specified
 				index = current_job_info.find("yrs")
-				span += 12 * int(current_job_info[index-2])
+				tenure += 12 * int(current_job_info[index-2])
 
-			employee_data["Employment Span"] = span
+			employee_data["Employment Tenure"] = tenure
 			break

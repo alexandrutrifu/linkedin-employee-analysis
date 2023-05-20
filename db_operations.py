@@ -28,7 +28,7 @@ def create_employees_table(database="employee_analysis"):
 		ID INTEGER PRIMARY KEY,
 		Name TEXT NOT NULL,
 		Role TEXT NOT NULL,
-		"Employment Span" INTEGER NOT NULL,
+		"Employment Tenure" INTEGER NOT NULL,
 		"Profile Tag" TEXT NOT NULL,
 		"CompanyID" INTEGER NOT NULL DEFAULT 9707,
 		"CompanyName" TEXT NOT NULL DEFAULT "Endava"
@@ -62,7 +62,7 @@ def insert_employees(employee: dict, database="employee_analysis"):
 	tuple_values = tuple(list(employee.values())[:-1])
 
 	# Inserting new values
-	cursor.execute(f"INSERT INTO employees ('Name', 'Role', 'Employment Span', 'Profile Tag', 'CompanyID', 'CompanyName') "
+	cursor.execute(f"INSERT INTO employees ('Name', 'Role', 'Employment Tenure', 'Profile Tag', 'CompanyID', 'CompanyName') "
 					f"VALUES {tuple_values}")
 
 	con.commit()
