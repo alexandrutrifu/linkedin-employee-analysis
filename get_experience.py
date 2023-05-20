@@ -5,7 +5,7 @@ def get_experience(company: str, driver: WebDriver, employee_data: dict):
 	""" Parses employee experience data
 
 	The function scrolls down the web page until the employee's 'Experience' sections becomes visible,
-	then parses and extracts their current employment span in a time format.
+	then parses and extracts their current employment tenure in a time format.
 	:param employee_data: Dictionary containing the values to be inserted into the employees table
 	:param company:
 	:param driver: Configured webdriver
