@@ -5,7 +5,7 @@ from db_operations import *
 
 # Specifying LinkedIn credentials
 username = "andronescuestera@gmail.com"
-password = "Parola asta e mai fake decat mine"
+password = os.environ["linkpass"]
 
 
 def start_driver() -> WebDriver:

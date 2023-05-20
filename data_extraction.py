@@ -6,7 +6,7 @@ from db_operations import *
 def extraction():
 	""" Progressively extracts employee data from company's profile
 
-	TODO: add function description
+	The function signs into LinkedIn, browsing lists of employees until finding enough to add to the database table
 	"""
 
 	url = "https://www.linkedin.com/voyager/api/search/dash/clusters?decorationId=com.linkedin.voyager.dash.deco.search" \
