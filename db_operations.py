@@ -70,7 +70,7 @@ def insert_employees(employee: dict, database="employee_analysis"):
 
 
 def check_employees(employee_tag: str, database="employee_analysis"):
-	""" Checks if the employee is already enlisted in the company's database
+	""" Checks if the employee is already listed in the company's database
 
 	:param database: Database name
 	:param employee_tag: Employee profile tag
